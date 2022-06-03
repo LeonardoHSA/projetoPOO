@@ -18,7 +18,7 @@ public class ConnectionFactory {
         
         try {
             
-            return DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/projetoPOO", "postgres", "batata"); //String de conexão
+            return DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/projetoPOO", "postgres", "+de8000"); //String de conexão
             
         } catch (SQLException e) {
             
