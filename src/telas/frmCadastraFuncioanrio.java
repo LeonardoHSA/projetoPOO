@@ -266,6 +266,15 @@ public class frmCadastraFuncioanrio extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Erro ao cadastrar: " + erro);
         }
         
+        nomeTextFild.setText("");
+        cpfTextFild.setText("");
+        rgTextFild.setText("");
+        telefoneTextFild.setText("");
+        sexoTextField.setText("");
+        salarioTextField.setText("");
+        pisTextField.setText("");
+        cargoTextFild.setText("");
+        
     }//GEN-LAST:event_botaoCadastrarActionPerformed
 
     /**
