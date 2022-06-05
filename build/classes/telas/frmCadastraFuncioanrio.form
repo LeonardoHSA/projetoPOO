@@ -259,7 +259,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Cadastro de funcionarios"/>
+        <Property name="text" type="java.lang.String" value="Cadastro de funcion&#xe1;rios"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>

@@ -113,7 +113,7 @@ public class frmCadastraFuncioanrio extends javax.swing.JFrame {
         jLabel12.setText("Ex: (11)92222-5555");
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel13.setText("Cadastro de funcionarios");
+        jLabel13.setText("Cadastro de funcionários");
         jLabel13.setToolTipText("");
 
         jLabel14.setText("Ex: 170.33259.50-4");

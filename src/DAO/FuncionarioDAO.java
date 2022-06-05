@@ -9,6 +9,9 @@ import jdbc.ConnectionFactory;
 import javaBeans.Funcionario;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -49,6 +52,44 @@ public class FuncionarioDAO {
             
         } catch (SQLException erroSQL) {
             throw new RuntimeException(erroSQL);
+        }
+    }
+    
+    // Listar todos os funcionários
+    public List<Funcionario> listarFuncionarios(){
+        
+        try {
+            // criando o vetor que vai armazenar os registros do banco
+            List<Funcionario> lista = new ArrayList<Funcionario>();
+            
+            // criando o comando sql
+            String cmdSql = "select * from public.Funcionario";
+            
+            PreparedStatement stmt = conecta.prepareStatement(cmdSql);
+            
+            // guardando o resultado do select dentro de um objeto result set
+            ResultSet rs = stmt.executeQuery();
+            
+            // enquanto houver registros, guarde o registro na fila
+            while(rs.next()){
+                Funcionario f = new Funcionario();
+                f.setId(rs.getInt("idFuncionario"));
+                f.setNome(rs.getString("nome"));
+                f.setCpf(rs.getString("cpf"));
+                f.setRg(rs.getString("rg"));
+                f.setTelefone("telefone");
+                f.setSexo(rs.getString("sexo"));
+                f.setSalario(rs.getDouble("salario"));
+                f.setPis(rs.getString("pis"));
+                f.setCargo(rs.getString("cargo"));
+                f.setImpostoSobreSalario(rs.getDouble("impostoSobreSalario"));
+                
+                lista.add(f);
+            }
+            
+            return lista;
+        } catch (Exception erroSql) {
+            throw new RuntimeException(erroSql);
         }
     }
 }
