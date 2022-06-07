@@ -3,7 +3,6 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Leonardo/Documents/NetBeansProjects/projetoPOO/projetoPOO/src/telas/frmTelaInicial.java</file>
             <file>file:/C:/Users/Leonardo/Documents/NetBeansProjects/projetoPOO/projetoPOO/src/telas/frmListaFuncionarios.java</file>
             <file>file:/C:/Users/Leonardo/Documents/NetBeansProjects/projetoPOO/projetoPOO/src/javaBeans/Pessoa.java</file>
             <file>file:/C:/Users/Leonardo/Documents/NetBeansProjects/projetoPOO/projetoPOO/src/telas/frmCadastraFuncioanrio.java</file>
@@ -11,7 +10,6 @@
             <file>file:/C:/Users/Leonardo/Documents/NetBeansProjects/projetoPOO/projetoPOO/src/DAO/FuncionarioDAO.java</file>
             <file>file:/C:/Users/Leonardo/Documents/NetBeansProjects/projetoPOO/projetoPOO/src/projetopoo/ProjetoPOO.java</file>
             <file>file:/C:/Users/Leonardo/Documents/NetBeansProjects/projetoPOO/projetoPOO/src/interfaces/CalculaImposto.java</file>
-            <file>file:/C:/Users/Leonardo/Documents/NetBeansProjects/projetoPOO/projetoPOO/src/jdbc/ConnectionFactory.java</file>
         </group>
     </open-files>
 </project-private>

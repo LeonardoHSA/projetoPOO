@@ -4,17 +4,57 @@
  */
 package telas;
 
+import DAO.FuncionarioDAO;
+import java.util.List;
+import javaBeans.Funcionario;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
+
 
 /**
  *
  * @author Leonardo
  */
+
 public class frmListaFuncionarios extends javax.swing.JFrame {
 
     /**
      * Creates new form frmListaFuncionarios
      */
+    
+    // listar
+    public void listar(){
+        try {
+            
+            // Executando o select
+            FuncionarioDAO dao = new FuncionarioDAO();
+            List<Funcionario> listaFuncionario = dao.listarFuncionarios();
+            
+            // colocando os dados na tabela
+            DefaultTableModel model = (DefaultTableModel) tabelaFuncionarios.getModel();
+            model.setRowCount(0);
+            
+            
+            
+            for (Funcionario f : listaFuncionario){
+                model.addRow(new Object[]{
+                    f.getId(),
+                    f.getNome(),
+                    f.getCpf(),
+                    f.getRg(),
+                    f.getTelefone(),
+                    f.getSexo(),
+                    f.getSalario(),
+                    f.getPis(),
+                    f.getCargo(),
+                    f.getImpostoSobreSalario()
+                });
+            }
+            
+        } catch (Exception e) {
+        }
+    }
+    
     public frmListaFuncionarios(String title) {
         super(title);
         initComponents();
@@ -64,6 +104,11 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
         jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         botaoVoltar.setText("Voltar");
         botaoVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -148,7 +193,7 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
                                 .addComponent(jLabel9)
                                 .addGap(18, 18, 18)
                                 .addComponent(oisTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(42, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
@@ -236,6 +281,11 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
     private void botaoDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoDeletarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botaoDeletarActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        // Listando dados na tabela
+        listar();
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
