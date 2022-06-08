@@ -86,7 +86,7 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         nomeTextField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        cofTextField = new javax.swing.JTextField();
+        cpfTextField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         rgTextField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -98,7 +98,7 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         salarioTextField = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        oisTextField = new javax.swing.JTextField();
+        pisTextField = new javax.swing.JTextField();
         botaoDeletar = new javax.swing.JButton();
         botaoEditar = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
@@ -209,7 +209,7 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
                                 .addGap(3, 3, 3)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(cofTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cpfTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(15, 15, 15)
                                         .addComponent(jLabel4)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -238,7 +238,7 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel9)
                                 .addGap(18, 18, 18)
-                                .addComponent(oisTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(pisTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -256,7 +256,7 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cofTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cpfTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
                     .addComponent(rgTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -272,7 +272,7 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
                     .addComponent(salarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(oisTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pisTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -314,6 +314,16 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
     private void tabelaFuncionariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaFuncionariosMouseClicked
         // TODO add your handling code here:
         idTextField.setText(tabelaFuncionarios.getValueAt(tabelaFuncionarios.getSelectedRow(), 0).toString());  
+        nomeTextField.setText(tabelaFuncionarios.getValueAt(tabelaFuncionarios.getSelectedRow(), 1).toString());
+        cpfTextField.setText(tabelaFuncionarios.getValueAt(tabelaFuncionarios.getSelectedRow(), 2).toString());
+        rgTextField.setText(tabelaFuncionarios.getValueAt(tabelaFuncionarios.getSelectedRow(), 3).toString());
+        foneTextField.setText(tabelaFuncionarios.getValueAt(tabelaFuncionarios.getSelectedRow(), 4).toString());
+        sexoTextField.setText(tabelaFuncionarios.getValueAt(tabelaFuncionarios.getSelectedRow(), 5).toString());
+        salarioTextField.setText(tabelaFuncionarios.getValueAt(tabelaFuncionarios.getSelectedRow(), 6).toString());
+        pisTextField.setText(tabelaFuncionarios.getValueAt(tabelaFuncionarios.getSelectedRow(), 7).toString());
+        cargoTextField.setText(tabelaFuncionarios.getValueAt(tabelaFuncionarios.getSelectedRow(), 8).toString());
+        
+        
     }//GEN-LAST:event_tabelaFuncionariosMouseClicked
 
     /**
@@ -356,7 +366,7 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
     private javax.swing.JButton botaoEditar;
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JTextField cargoTextField;
-    private javax.swing.JTextField cofTextField;
+    private javax.swing.JTextField cpfTextField;
     private javax.swing.JTextField foneTextField;
     private javax.swing.JTextField idTextField;
     private javax.swing.JLabel jLabel1;
@@ -373,7 +383,7 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField nomeTextField;
-    private javax.swing.JTextField oisTextField;
+    private javax.swing.JTextField pisTextField;
     private javax.swing.JTextField rgTextField;
     private javax.swing.JTextField salarioTextField;
     private javax.swing.JTextField sexoTextField;

@@ -56,7 +56,7 @@ public class frmCadastraFuncioanrio extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         rgTextFild = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        telefoneTextFild = new javax.swing.JTextField();
+        foneTextFild = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         cargoTextFild = new javax.swing.JTextField();
         sexoTextField = new javax.swing.JTextField();
@@ -153,7 +153,7 @@ public class frmCadastraFuncioanrio extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel12)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(telefoneTextFild, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(foneTextFild, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -207,7 +207,7 @@ public class frmCadastraFuncioanrio extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(telefoneTextFild, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(foneTextFild, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sexoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
                     .addComponent(salarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -250,7 +250,7 @@ public class frmCadastraFuncioanrio extends javax.swing.JFrame {
         obj.setNome(nomeTextFild.getText());
         obj.setCpf(cpfTextFild.getText());
         obj.setRg(rgTextFild.getText());
-        obj.setTelefone(telefoneTextFild.getText());
+        obj.setTelefone(foneTextFild.getText());
         obj.setSexo(sexoTextField.getText());
         obj.setSalario(Double.parseDouble(salarioTextField.getText()));
         obj.setPis(pisTextField.getText());
@@ -269,7 +269,7 @@ public class frmCadastraFuncioanrio extends javax.swing.JFrame {
         nomeTextFild.setText("");
         cpfTextFild.setText("");
         rgTextFild.setText("");
-        telefoneTextFild.setText("");
+        foneTextFild.setText("");
         sexoTextField.setText("");
         salarioTextField.setText("");
         pisTextField.setText("");
@@ -317,6 +317,7 @@ public class frmCadastraFuncioanrio extends javax.swing.JFrame {
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JTextField cargoTextFild;
     private javax.swing.JTextField cpfTextFild;
+    private javax.swing.JTextField foneTextFild;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -336,6 +337,5 @@ public class frmCadastraFuncioanrio extends javax.swing.JFrame {
     private javax.swing.JTextField rgTextFild;
     private javax.swing.JTextField salarioTextField;
     private javax.swing.JTextField sexoTextField;
-    private javax.swing.JTextField telefoneTextFild;
     // End of variables declaration//GEN-END:variables
 }

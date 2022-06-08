@@ -77,7 +77,7 @@ public class FuncionarioDAO {
                 f.setNome(rs.getString("nome"));
                 f.setCpf(rs.getString("cpf"));
                 f.setRg(rs.getString("rg"));
-                f.setTelefone("telefone");
+                f.setTelefone(rs.getString("telefone"));
                 f.setSexo(rs.getString("sexo"));
                 f.setSalario(rs.getDouble("salario"));
                 f.setPis(rs.getString("pis"));
