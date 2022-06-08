@@ -313,8 +313,7 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
 
     private void tabelaFuncionariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelaFuncionariosMouseClicked
         // TODO add your handling code here:
-        idTextField.setText(tabelaFuncionarios.getValueAt(tabelaFuncionarios.getSelectedRow(), 0).toString());
-        
+        idTextField.setText(tabelaFuncionarios.getValueAt(tabelaFuncionarios.getSelectedRow(), 0).toString());  
     }//GEN-LAST:event_tabelaFuncionariosMouseClicked
 
     /**
