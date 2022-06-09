@@ -8,6 +8,7 @@ import DAO.FuncionarioDAO;
 import java.util.List;
 import javaBeans.Funcionario;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -86,7 +87,7 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         nomeTextField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        cofTextField = new javax.swing.JTextField();
+        cpfTextField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         rgTextField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -98,8 +99,11 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         salarioTextField = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        oisTextField = new javax.swing.JTextField();
+        pisTextField = new javax.swing.JTextField();
         botaoDeletar = new javax.swing.JButton();
+        codigoTextField = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        botaoAlterar = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
 
@@ -144,6 +148,12 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
 
         jLabel5.setText("Cargo:");
 
+        cargoTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cargoTextFieldActionPerformed(evt);
+            }
+        });
+
         jLabel6.setText("Fone: ");
 
         jLabel7.setText("Sexo: ");
@@ -158,10 +168,31 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
 
         jLabel9.setText("PIS: ");
 
+        pisTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pisTextFieldActionPerformed(evt);
+            }
+        });
+
         botaoDeletar.setText("Deletar");
         botaoDeletar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoDeletarActionPerformed(evt);
+            }
+        });
+
+        codigoTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                codigoTextFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setText("Codigo:");
+
+        botaoAlterar.setText("Alterar");
+        botaoAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoAlterarActionPerformed(evt);
             }
         });
 
@@ -170,57 +201,63 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(botaoVoltar)
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(codigoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel2)
-                                .addGap(3, 3, 3)
-                                .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(133, 133, 133)
-                                .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(sexoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(17, 17, 17)
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(salarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel9)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel9))
                                 .addGap(18, 18, 18)
-                                .addComponent(oisTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(foneTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                                            .addComponent(pisTextField))
+                                        .addGap(15, 15, 15)
+                                        .addComponent(jLabel7)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(sexoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(17, 17, 17)
+                                        .addComponent(jLabel8)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(salarioTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(cpfTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel4)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(rgTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(cargoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(29, 29, 29))))
+                            .addComponent(jLabel3)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(botaoAlterar)
+                            .addGap(18, 18, 18)
+                            .addComponent(botaoDeletar))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(18, 18, 18)
-                                .addComponent(cofTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(foneTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rgTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cargoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(botaoDeletar)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(35, 35, 35)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(127, 127, 127)
-                            .addComponent(jLabel1))))
-                .addGap(38, 38, 38))
+                                .addGap(35, 35, 35)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(127, 127, 127)
+                                .addComponent(jLabel1)))))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,11 +267,13 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
                 .addGap(6, 6, 6)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(codigoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(cofTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cpfTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(rgTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
@@ -250,13 +289,14 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(oisTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pisTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoVoltar)
-                    .addComponent(botaoDeletar))
+                    .addComponent(botaoDeletar)
+                    .addComponent(botaoAlterar))
                 .addContainerGap())
         );
 
@@ -286,6 +326,55 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
         // Listando dados na tabela
         listar();
     }//GEN-LAST:event_formWindowActivated
+
+    private void cargoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargoTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cargoTextFieldActionPerformed
+
+    private void codigoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codigoTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_codigoTextFieldActionPerformed
+
+    private void botaoAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAlterarActionPerformed
+        // TODO add your handling code here:
+        
+        // guardando os dados da tela no objeto funcioanrio
+        try {
+            Funcionario obj = new Funcionario();
+            obj.setId(Integer.parseInt(codigoTextField.getText()));
+            obj.setNome(nomeTextField.getText());
+            obj.setCpf(cpfTextField.getText());
+            obj.setRg(rgTextField.getText());
+            obj.setTelefone(foneTextField.getText());
+            obj.setSexo(sexoTextField.getText());
+            obj.setSalario(Double.parseDouble(salarioTextField.getText()));
+            obj.setPis(pisTextField.getText());
+            obj.setCargo(cargoTextField.getText());
+        
+        obj.calculaImposto();
+        
+        FuncionarioDAO dao = new FuncionarioDAO();
+        dao.alterarFuncioanrio(obj);
+        
+        JOptionPane.showMessageDialog(null, "Alteração realizada com sucesso!!!");
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(null, "Erro ao alterar: " + erro);
+        }
+        
+        codigoTextField.setText("");
+        nomeTextField.setText("");
+        cpfTextField.setText("");
+        rgTextField.setText("");
+        foneTextField.setText("");
+        sexoTextField.setText("");
+        salarioTextField.setText("");
+        pisTextField.setText("");
+        cargoTextField.setText("");
+    }//GEN-LAST:event_botaoAlterarActionPerformed
+
+    private void pisTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pisTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pisTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -323,12 +412,15 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoAlterar;
     private javax.swing.JButton botaoDeletar;
     private javax.swing.JButton botaoVoltar;
     private javax.swing.JTextField cargoTextField;
-    private javax.swing.JTextField cofTextField;
+    private javax.swing.JTextField codigoTextField;
+    private javax.swing.JTextField cpfTextField;
     private javax.swing.JTextField foneTextField;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -341,7 +433,7 @@ public class frmListaFuncionarios extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField nomeTextField;
-    private javax.swing.JTextField oisTextField;
+    private javax.swing.JTextField pisTextField;
     private javax.swing.JTextField rgTextField;
     private javax.swing.JTextField salarioTextField;
     private javax.swing.JTextField sexoTextField;

@@ -55,6 +55,38 @@ public class FuncionarioDAO {
         }
     }
     
+    //Alterar funcionario
+     public void alterarFuncioanrio(Funcionario obj){
+        
+        try{
+            // criando o comando sql
+            String cmdsql = "UPDATE public.Funcionario SET nome = ?, cpf = ?, rg = ?, telefone = ?, sexo = ?, salario = ?, pis = ?, cargo = ?, impostoSobreSalario = ? " + "WHERE idfuncionario = ?";
+            
+            // organizando o cmdsql e executando
+            PreparedStatement stmt = conecta.prepareStatement(cmdsql);
+            stmt.setString(1, obj.getNome());
+            stmt.setString(2, obj.getCpf());
+            stmt.setString(3, obj.getRg());
+            stmt.setString(4, obj.getTelefone());
+            stmt.setString(5, obj.getSexo());
+            stmt.setDouble(6, obj.getSalario());
+            stmt.setString(7, obj.getPis());
+            stmt.setString(8, obj.getCargo());
+            stmt.setDouble(9, obj.getImpostoSobreSalario());
+            
+            //passando o ID
+            stmt.setInt(10, obj.getId());
+            
+            stmt.execute();
+            
+            // fechando a conexão
+            stmt.close(); 
+            
+        } catch (SQLException erroSQL) {
+            throw new RuntimeException(erroSQL);
+        }
+    }
+    
     // Listar todos os funcionários
     public List<Funcionario> listarFuncionarios(){
         

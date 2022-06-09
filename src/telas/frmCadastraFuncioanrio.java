@@ -100,6 +100,12 @@ public class frmCadastraFuncioanrio extends javax.swing.JFrame {
 
         jLabel8.setText("Cargo:");
 
+        nomeTextFild.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeTextFildActionPerformed(evt);
+            }
+        });
+
         cpfTextFild.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cpfTextFildActionPerformed(evt);
@@ -111,6 +117,12 @@ public class frmCadastraFuncioanrio extends javax.swing.JFrame {
         jLabel11.setText("Ex: 11.222.333-4");
 
         jLabel12.setText("Ex: (11)92222-5555");
+
+        cargoTextFild.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cargoTextFildActionPerformed(evt);
+            }
+        });
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel13.setText("Cadastro de funcionários");
@@ -276,6 +288,14 @@ public class frmCadastraFuncioanrio extends javax.swing.JFrame {
         cargoTextFild.setText("");
         
     }//GEN-LAST:event_botaoCadastrarActionPerformed
+
+    private void nomeTextFildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTextFildActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeTextFildActionPerformed
+
+    private void cargoTextFildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargoTextFildActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cargoTextFildActionPerformed
 
     /**
      * @param args the command line arguments

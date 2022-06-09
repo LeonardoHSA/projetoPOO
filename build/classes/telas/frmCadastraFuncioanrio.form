@@ -223,6 +223,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="nomeTextFild">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeTextFildActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="cpfTextFild">
       <Events>
@@ -249,6 +252,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="cargoTextFild">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cargoTextFildActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="sexoTextField">
     </Component>
