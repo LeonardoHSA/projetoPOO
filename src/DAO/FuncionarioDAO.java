@@ -92,4 +92,56 @@ public class FuncionarioDAO {
             throw new RuntimeException(erroSql);
         }
     }
+    
+    public void alterarFuncionaio(Funcionario obj){
+        
+        try {
+            
+            // criando o comando sql
+            String cmdsql = "update Funcionario set nome=?, cpf=?,rg=?,telefone=?, sexo=?, salario=?, pis=?, cargo=?, impostoSobreSalario=? where idFuncionario=?";
+            
+            // organizando o cmdsql e executando
+            PreparedStatement stmt = conecta.prepareStatement(cmdsql);
+            stmt.setString(1, obj.getNome());
+            stmt.setString(2, obj.getCpf());
+            stmt.setString(3, obj.getRg());
+            stmt.setString(4, obj.getTelefone());
+            stmt.setString(5, obj.getSexo());
+            stmt.setDouble(6, obj.getSalario());
+            stmt.setString(7, obj.getPis());
+            stmt.setString(8, obj.getCargo());
+            stmt.setDouble(9, obj.getImpostoSobreSalario());
+            stmt.setInt(10, obj.getId());
+            
+            stmt.execute();
+            
+            // fechando a conexão
+            stmt.close();
+            
+        } catch (SQLException erroSQL) {
+            throw new RuntimeException(erroSQL);
+        }
+    }
+    
+    public void excluirFuncioanrio(Funcionario obj){
+        
+        try {
+            
+            // criando o comando sql
+            String cmdsql = "delete from Funcionario where idFuncionario=?";
+            
+            // organizando o cmdsql e executando
+            PreparedStatement stmt = conecta.prepareStatement(cmdsql);
+            
+            stmt.setInt(1, obj.getId());
+            
+            stmt.execute();
+            
+            // fechando a conexão
+            stmt.close();
+            
+        } catch (SQLException erroSQL) {
+            throw new RuntimeException(erroSQL);
+        }
+    }
 }

@@ -44,7 +44,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="cpfTextFild" min="-2" pref="107" max="-2" attributes="0"/>
+                                      <Component id="cpfTextField" min="-2" pref="107" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -53,11 +53,11 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="rgTextFild" min="-2" pref="93" max="-2" attributes="0"/>
+                                      <Component id="rgTextField" min="-2" pref="93" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="cargoTextFild" min="-2" pref="109" max="-2" attributes="0"/>
+                                      <Component id="cargoTextField" min="-2" pref="109" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -69,7 +69,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="foneTextFild" min="-2" pref="126" max="-2" attributes="0"/>
+                                      <Component id="foneTextField" min="-2" pref="126" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -99,7 +99,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="nomeTextFild" min="-2" pref="414" max="-2" attributes="0"/>
+                                  <Component id="nomeTextField" min="-2" pref="414" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -121,16 +121,16 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="nomeTextFild" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="nomeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cpfTextFild" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cpfTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="rgTextFild" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rgTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cargoTextFild" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cargoTextField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -140,7 +140,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="foneTextFild" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="foneTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="sexoTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="salarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -222,11 +222,11 @@
         <Property name="text" type="java.lang.String" value="Cargo:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="nomeTextFild">
+    <Component class="javax.swing.JTextField" name="nomeTextField">
     </Component>
-    <Component class="javax.swing.JTextField" name="cpfTextFild">
+    <Component class="javax.swing.JTextField" name="cpfTextField">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cpfTextFildActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cpfTextFieldActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel10">
@@ -234,21 +234,21 @@
         <Property name="text" type="java.lang.String" value="Ex: 111.222.333-44"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="rgTextFild">
+    <Component class="javax.swing.JTextField" name="rgTextField">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ex: 11.222.333-4"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="foneTextFild">
+    <Component class="javax.swing.JTextField" name="foneTextField">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel12">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ex: (11)92222-5555"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="cargoTextFild">
+    <Component class="javax.swing.JTextField" name="cargoTextField">
     </Component>
     <Component class="javax.swing.JTextField" name="sexoTextField">
     </Component>
